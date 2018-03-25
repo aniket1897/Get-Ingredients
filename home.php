@@ -1,3 +1,12 @@
+<?php
+session_start();
+$db=mysqli_connect('localhost','root','','Get-Recipe');
+if( mysqli_connect_error($db) ){
+      echo($db);
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,25 +14,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="styles.css">
-   <!-- <link rel="icon" href="../../../../favicon.ico">-->
+  
 
-    <title>Signin to Get Recipe</title>
+    <title>Welcome to Get Recipe!!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 
-    <!-- jQuery Scripts -->
+    <!-- jQuery & Bootstrap Scripts -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
     </script>
-
     <script src="bootstrap/bootstrap.min.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <!-- Styles for home page -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="home.css" rel="stylesheet">
+
+
   </head>
 
   <body class="text-center">
@@ -41,50 +51,56 @@
 
            <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="home.php">Home<span class="sr-only">(current)</span></a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+                <li class="nav-item ">
+                  <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
                   <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
                 </li>
-
-
-              </ul>
-              
+              </ul>     
             </div> 
-      
           </nav>
         </header>
 
-    <form class="form-signin">
-       <img class="mb-4" src="images/logo.jpeg" alt="" width="152" height="152"> 
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-       <button class="btn btn-lg btn-danger btn-block" type="submit">Sign in</button> 
-     <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>-->
-    </form>
+        <div class="container-fluid">
+            <div class="row">
+              <?php
+              $result=mysqli_query($db,'SELECT * FROM recipes');
+              while( $row = mysqli_fetch_array($result)){
+ 
+                $title=$row['name'];
+                $desc=$row['description'];
+                $url=$row['link'];
+                echo "<div class='col-md-4'>
+                         <div class='card'>
+                             <h1>$title</h1>
+                             <h5>$desc</h5>
+                             <h3>$url</h3>
+                     </div>
+                     </div>";
+               }
+              echo("</div></div>");
 
-    <footer class="footer bg-footer-color">
+        /*      echo("<footer class='footer bg-footer-color'>
+              <div class='container'>
+                <span class='text-muted'>&copy; Copyright 2018-2019</span>
+              </div>
+            </footer>
+              ");*/
+
+
+
+              ?>
+
+ <!--   <footer class="footer bg-footer-color">
         <div class="container">
           <span class="text-muted">&copy; Copyright 2018-2019</span>
         </div>
-      </footer>
-
-
-
-
+      </footer> -->
   </body>
 </html>
