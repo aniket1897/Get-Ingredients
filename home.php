@@ -54,7 +54,8 @@ if( mysqli_connect_error($db) ){
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
-               
+              </ul>
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
                   <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
                 </li>
