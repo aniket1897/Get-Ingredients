@@ -79,9 +79,11 @@ if( mysqli_connect_error($db) ){
                 $url=$row['link'];
                 echo "<div class='col-md-4'>
                          <div class='card'>
-                             <h1>$title</h1>
-                             <h5>$desc</h5>
-                             <h3>$url</h3>
+                         <img class='card-img-top' src=$url height='190' width='190'  alt='Card image'>
+                         <div class='card-body'>
+                             <h5>$title</h5>
+                             <h3>$desc</h3>
+                         </div>
                      </div>
                      </div>";
                }
