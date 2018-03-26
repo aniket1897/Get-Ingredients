@@ -86,12 +86,12 @@ if( mysqli_connect_error($db) ){
                }
               echo("</div></div>");
 
-        /*      echo("<footer class='footer bg-footer-color'>
+              echo("<footer class='footer bg-footer-color'>
               <div class='container'>
                 <span class='text-muted'>&copy; Copyright 2018-2019</span>
               </div>
             </footer>
-              ");*/
+              ");
 
 
 
