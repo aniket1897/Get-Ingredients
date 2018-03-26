@@ -63,6 +63,9 @@ if( mysqli_connect_error($db) ){
                 <li class="nav-item">
                   <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blogs<span class="sr-only">(current)</span></a>
+                </li>
               </ul>     
             </div> 
           </nav>
