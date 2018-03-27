@@ -4,8 +4,6 @@ $db=mysqli_connect('localhost','root','','Get-Recipe');
 if( mysqli_connect_error($db) ){
       echo($db);
 }
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,8 +30,6 @@ if( mysqli_connect_error($db) ){
     <!-- Styles for home page -->
     <link rel="stylesheet" href="styles.css">
     <link href="home.css" rel="stylesheet">
-
-
   </head>
 
   <body class="text-center">
@@ -54,6 +50,20 @@ if( mysqli_connect_error($db) ){
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Veg Recipes<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Non-Veg Recipes<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">Diet Recipes<span class="sr-only">(current)</span></a>
+                </li>
+
+
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
@@ -70,10 +80,10 @@ if( mysqli_connect_error($db) ){
             </div> 
           </nav>
         </header>
-
+<!--
         <div class="container-fluid">
             <div class="row">
-              <?php
+               <?php
               $result=mysqli_query($db,'SELECT * FROM recipes');
               while( $row = mysqli_fetch_array($result)){
  
@@ -101,12 +111,12 @@ if( mysqli_connect_error($db) ){
 
 
 
-              ?>
-
- <!--   <footer class="footer bg-footer-color">
+              ?> 
+-->
+    <footer class="footer bg-footer-color">
         <div class="container">
           <span class="text-muted">&copy; Copyright 2018-2019</span>
         </div>
-      </footer> -->
+      </footer> 
   </body>
 </html>
