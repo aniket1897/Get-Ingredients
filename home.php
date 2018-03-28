@@ -74,7 +74,7 @@ if( mysqli_connect_error($db) ){
                   <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Blogs<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="https://getrecipe591286641.wordpress.com">Blogs<span class="sr-only">(current)</span></a>
                 </li>
               </ul>     
             </div> 
