@@ -1,3 +1,4 @@
+<!--
 <?php
 session_start();
 $db=mysqli_connect('localhost','root','','Get-Recipe');
@@ -5,6 +6,7 @@ if( mysqli_connect_error($db) ){
       echo($db);
 }
 ?>
+-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,8 +18,12 @@ if( mysqli_connect_error($db) ){
 
     <title>Welcome to Get Recipe!!</title>
 
+    <script src="main.js" ></script>
+
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- jQuery & Bootstrap Scripts -->
 
@@ -30,6 +36,44 @@ if( mysqli_connect_error($db) ){
     <!-- Styles for home page -->
     <link rel="stylesheet" href="styles.css">
     <link href="home.css" rel="stylesheet">
+
+    <!-- Temp styles -->
+    <style>
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #ff4d4d;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #660000;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+    </style>
+
+
   </head>
 
   <body class="text-center">
@@ -80,39 +124,24 @@ if( mysqli_connect_error($db) ){
             </div> 
           </nav>
         </header>
-<!--
-        <div class="container-fluid">
-            <div class="row">
-               <?php
-              $result=mysqli_query($db,'SELECT * FROM recipes');
-              while( $row = mysqli_fetch_array($result)){
- 
-                $title=$row['name'];
-                $desc=$row['description'];
-                $url=$row['link'];
-                echo "<div class='col-md-4'>
-                         <div class='card'>
-                         <img class='card-img-top' src=$url height='190' width='190'  alt='Card image'>
-                         <div class='card-body'>
-                             <h5>$title</h5>
-                             <h3>$desc</h3>
-                         </div>
-                     </div>
-                     </div>";
-               }
-              echo("</div></div>");
+        
+      <!-- Search Box -->
+      <div class="container-fluid">
+         <div class="search_box">
+        
+              <form>
+                <input type="text" id="search_field" placeholder="Search for any recipes u like!!!!" name="search">
+                <button onclick="loadDoc()"><i class="fa fa-search"></i></button>
+              </form>
 
-              echo("<footer class='footer bg-footer-color'>
-              <div class='container'>
-                <span class='text-muted'>&copy; Copyright 2018-2019</span>
-              </div>
-            </footer>
-              ");
+         </div>   
+      </div>
+
+        <div class="recipes">
 
 
+        </div>
 
-              ?> 
--->
     <footer class="footer bg-footer-color">
         <div class="container">
           <span class="text-muted">&copy; Copyright 2018-2019</span>
