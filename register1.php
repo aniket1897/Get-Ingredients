@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +9,41 @@
    <!-- <link rel="icon" href="../../../../favicon.ico">-->
 
     <title>Register to Get Recipe</title>
-
+    <!-- ajax 
+    <script type="text/javascript">
+      function check(value)
+      {
+        xmlHttp=GetXmlHttpObject()
+        var url="checkmail.php"
+        url=url+"?emailid="+value;
+        xmlHttp.onreadystatechange=stateChanged
+        xmlHttp.open("Get",url,true)
+        xmlHttp.send(null)
+      }
+      function stateChanged(){
+        if(xmlHttp.readyState==4 || xmlHttp.readyState="complete")
+        {
+          var showdata=xmlHttp.responseText;
+          document.getElementById("email").innerHTML=showdata;
+        }
+      }
+      function GetXmlHttpObject(){
+        var xmlHttp=null;
+        try{
+          xmlHttp=new XMLHttpRequest();
+        }
+        catch(e){
+          try{
+            xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+          }
+          catch(e){
+            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+        }
+        return xmlHttp;
+      }
+    </script>
+-->
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -73,7 +108,7 @@
           </nav>
         </header>
 
-    <form class="form-signin" action="server.php">
+    <form class="form-signin" method="post" action=""register1.php"">
        <img class="mb-4" src="images/logo.jpeg" alt="" width="152" height="152"> 
       <h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
