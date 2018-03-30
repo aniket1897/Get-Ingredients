@@ -4,9 +4,32 @@ function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     //document.getElementById("demo").innerHTML = this.responseText;
-     console.log(this.response);
+     var response=JSON.parse(xhttp.responseText);
+     var matches=response.matches;
+   
+     console.log(response);
+
+     for(var i=0; i< matches.length ;  i++  ){
+         
+      var div=document.createElement('div');
+      div.className="col-md-4";
+      
+      div.innerHTML=' <div class="card" style="width:300px">\
+      <img class="card-img-top" src="'+ matches[i].imageUrlsBySize[90] +'" alt="Card image">\
+      <div class="card-body">\
+        <h4 class="card-title">'+ matches[i].sourceDisplayName  +'</h4>\
+        <p class="card-text">Time taken to make: '+ matches[i].totalTimeInSeconds +'</p>\
+        <a href="#" class="btn btn-primary">See Recipe</a>\
+      </div>\
+    </div>';
+     
+      document.getElementById('recipes').appendChild(div);
+
+   }
+
+
     }
+
   };
   xhttp.open("GET",url, true);
   xhttp.send();
