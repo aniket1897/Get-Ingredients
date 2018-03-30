@@ -39,8 +39,7 @@ if( mysqli_connect_error($db) ){
 
     <!-- Temp styles -->
     <style>
-
-form.example input[type=text] {
+      form.search_box input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
@@ -48,8 +47,7 @@ form.example input[type=text] {
     width: 80%;
     background: #f1f1f1;
 }
-
-form.example button {
+form.search_box button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -60,17 +58,14 @@ form.example button {
     border-left: none;
     cursor: pointer;
 }
-
-form.example button:hover {
+form.search_box button:hover {
     background: #660000;
 }
-
-form.example::after {
+form.search_box::after {
     content: "";
     clear: both;
     display: table;
 }
-
     </style>
 
 
@@ -129,9 +124,9 @@ form.example::after {
       <div class="container-fluid">
          <div class="search_box">
         
-              <form>
+              <form class="search_box">
                 <input type="text" id="search_field" placeholder="Search for any recipes u like!!!!" name="search">
-                <button onclick="loadDoc()"><i class="fa fa-search"></i></button>
+                <button type="button" onclick="loadDoc()"><i class="fa fa-search"></i></button>
               </form>
 
          </div>   
