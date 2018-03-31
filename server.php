@@ -8,7 +8,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'registration1');
+$db = mysqli_connect('localhost', 'root', '', 'Get-Recipe');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -54,7 +54,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $firstname;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: login1.php');
+  	header('location: login.php');
   }
 
 }
@@ -81,7 +81,7 @@ if (isset($_POST['login_user'])) {
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $firstname;
       $_SESSION['success'] = "You are now logged in";
-      header('location:profile.php');
+      header('location: profile.php');
     }else {
       array_push($errors, "Wrong email/password combination");
       

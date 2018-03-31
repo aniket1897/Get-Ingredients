@@ -42,27 +42,28 @@
 
            <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="home.php">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="register.php">Register<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Blogs<span class="sr-only">(current)</span></a>
-                </li>
+              
               </ul>     
             </div> 
           </nav>
         </header>
 
-    <form class="form-signin" method="post" action=""login1.php"">
+    <form class="form-signin" method="post" action="login.php">
              <img class="mb-4" src="images/logo.jpeg" alt="" width="152" height="152"> 
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
@@ -77,7 +78,6 @@
         </label>
       </div>
        <button class="btn btn-lg btn-danger btn-block" type="submit" name="login_user">Sign in</button> 
-     <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>-->
     </form>
 
     <footer class="footer bg-footer-color">

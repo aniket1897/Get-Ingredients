@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('server.php') ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,41 +9,9 @@
    <!-- <link rel="icon" href="../../../../favicon.ico">-->
 
     <title>Register to Get Recipe</title>
-    <!-- ajax 
-    <script type="text/javascript">
-      function check(value)
-      {
-        xmlHttp=GetXmlHttpObject()
-        var url="checkmail.php"
-        url=url+"?emailid="+value;
-        xmlHttp.onreadystatechange=stateChanged
-        xmlHttp.open("Get",url,true)
-        xmlHttp.send(null)
-      }
-      function stateChanged(){
-        if(xmlHttp.readyState==4 || xmlHttp.readyState="complete")
-        {
-          var showdata=xmlHttp.responseText;
-          document.getElementById("email").innerHTML=showdata;
-        }
-      }
-      function GetXmlHttpObject(){
-        var xmlHttp=null;
-        try{
-          xmlHttp=new XMLHttpRequest();
-        }
-        catch(e){
-          try{
-            xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-          }
-          catch(e){
-            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-          }
-        }
-        return xmlHttp;
-      }
-    </script>
--->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -53,12 +21,49 @@
      </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
      </script>
- 
+
      <script src="bootstrap/bootstrap.min.js"></script>
 
 
     <!-- Custom styles for this template -->
     <link href="register.css" rel="stylesheet">
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+function checkemail()
+{
+ var email=document.getElementById( "email" ).value;
+  
+ if(email)
+ {
+  $.ajax({
+  type: 'post',
+  url: 'check1.php',
+  data: {
+   email:email,
+  },
+  success: function (response) {
+   $( '#email_status' ).html(response);
+   if(response=="OK") 
+   {
+    return true;  
+   }
+   else
+   {
+    return false; 
+   }
+  }
+  });
+ }
+ else
+ {
+  $( '#email_status' ).html("");
+  return false;
+ }
+}
+
+</script>
   </head>
 
   <body class="text-center">
@@ -77,38 +82,28 @@
            <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="home.php">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Veg Recipes<span class="sr-only">(current)</span></a>
-                  </li>
-  
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Non-Veg Recipes<span class="sr-only">(current)</span></a>
-                  </li>
-  
-                  <li class="nav-item ">
-                    <a class="nav-link" href="#">Diet Recipes<span class="sr-only">(current)</span></a>
-                  </li>
+                  <a class="nav-link" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
+                </li>
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Register<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="register.php">Register<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://getrecipe591286641.wordpress.com">Blogs<span class="sr-only">(current)</span></a>
-                  </li>
-
+              
               </ul>     
             </div> 
           </nav>
         </header>
 
-    <form class="form-signin" method="post" action=""register1.php"">
+    <form class="form-signin" method="post" action="register5.php">
+      
        <img class="mb-4" src="images/logo.jpeg" alt="" width="152" height="152"> 
       <h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
@@ -119,8 +114,9 @@
       <input type="text" name="lname" id="lname" class="form-control" placeholder="Enter last name" required>
 
       <label for="email" class="sr-only">Enter email address</label>
-      <input type="email" id="email" name="email" class="form-control" placeholder="Enter email address" required>
-
+      <input type="email" id="email" name="email" class="form-control" onkeyup="checkemail();" placeholder="Enter email address" required>
+          <span id="email_status"></span>
+      <input type="hidden" class="form-control"><font color="red"><div id="mydiv"></div></font>
       <label for="password" class="sr-only">Password</label>
       <input type="password" name="password_1" id="inputPassword" class="form-control" placeholder="Password" required>
 
@@ -128,7 +124,8 @@
       <input type="password" id="cpass" name="password_2" class="form-control" placeholder="Enter confirm password" required>
 
      
-       <button class="btn btn-lg btn-danger btn-block" type="submit" name="reg_user">Sign in</button> 
+       <button class="btn btn-lg btn-danger btn-block" type="submit" name="reg_user">Sign in</button>
+       <?php include('errors.php'); ?> 
      <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>-->
     </form>
 
@@ -141,4 +138,3 @@
 
   </body>
 </html>
-

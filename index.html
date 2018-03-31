@@ -9,10 +9,6 @@
 
     <title>Welcome to Get Recipe!!</title>
 
-    <!-- Scripts -->
-    <script src="main.js" ></script>
-    <script src="recipes.js" ></script>
-
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,39 +23,9 @@
   
     <!-- Styles for home page -->
     <link rel="stylesheet" href="styles.css">
-    <link href="home.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
 
-    <!-- Temp styles -->
-    <style>
-      form.search_box input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-}
-form.search_box button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #ff4d4d;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
-form.search_box button:hover {
-    background: #660000;
-}
-form.search_box::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-    </style>
-
+   
 
   </head>
 
@@ -81,53 +47,24 @@ form.search_box::after {
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
-
-             <!---   <li class="nav-item">
-                  <a class="nav-link" href="#">Veg Recipes<span class="sr-only">(current)</span></a>
-                </li>
-
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Non-Veg Recipes<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
                 </li>
-
-                <li class="nav-item ">
-                  <a class="nav-link" href="#">Diet Recipes<span class="sr-only">(current)</span></a>
-                </li>
-              -->
-
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
-                  <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="register.php">Register<span class="sr-only">(current)</span></a>
                 </li>
-
-              <!--
-                <li class="nav-item">
-                  <a class="nav-link" href="https://getrecipe591286641.wordpress.com">Blogs<span class="sr-only">(current)</span></a>
-                </li>
-              -->
               </ul>     
             </div> 
           </nav>
         </header>
         
-      <!-- Search Box -->
-      <div class="container-fluid">
-         <div class="search_box">
-        
-              <form class="search_box">
-                <input type="text" id="search_field" placeholder="Search for any recipes u like!!!!" name="search">
-                <button type="button" onclick="loadDoc()"><i class="fa fa-search"></i></button>
-              </form>
-
-         </div>
-         
-         <div class="row" id="recipes">
-         </div>
+        <!-- Add parallax scrolling here -->
          
         
       </div>   
