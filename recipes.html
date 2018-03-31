@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -9,8 +9,6 @@
 
     <title>Welcome to Get Recipe!!</title>
 
-    <!-- Scripts -->
-    <script src="main.js" ></script>
     <script src="recipes.js" ></script>
 
     <!-- Bootstrap core CSS -->
@@ -25,42 +23,9 @@
     </script>
     <script src="bootstrap/bootstrap.min.js"></script>
   
-    <!-- Styles for home page -->
+    <!-- Styles for recipes page -->
     <link rel="stylesheet" href="styles.css">
     <link href="home.css" rel="stylesheet">
-
-    <!-- Temp styles -->
-    <style>
-      form.search_box input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-}
-form.search_box button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #ff4d4d;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
-form.search_box button:hover {
-    background: #660000;
-}
-form.search_box::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-    </style>
-
-
   </head>
 
   <body class="text-center" style="background-color: #ffcccc;">
@@ -115,26 +80,6 @@ form.search_box::after {
           </nav>
         </header>
         
-      <!-- Search Box -->
-      <div class="container-fluid">
-         <div class="search_box">
-        
-              <form class="search_box">
-                <input type="text" id="search_field" placeholder="Search for any recipes u like!!!!" name="search">
-                <button type="button" onclick="loadDoc()"><i class="fa fa-search"></i></button>
-              </form>
-
-         </div>
-         
-         <div class="row" id="recipes">
-         </div>
-         
-        
-      </div>   
-    <footer class="footer bg-footer-color">
-        <div class="container">
-          <span class="text-muted">&copy; Copyright 2018-2019</span>
-        </div>
-      </footer> 
-  </body>
+  
+</body>
 </html>

@@ -1,23 +1,4 @@
 <?php
-/*use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-require_once 'PHPMailer/src/PHPMailer.php';
-require_once 'PHPMailer/src/SMTP.php';
-//session_start();
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-
-// require 'vendor/autoload.php';
-//require 'PHPMailer/PHPMailerAutoload.php';
-
-*/
-
-require 'PHPMailer/class.phpmailer.php';
-
-require 'PHPMailer/class.smtp.php';
-
-
 // initializing variables
 $firstname = "";
 $lastname = "";
@@ -62,47 +43,7 @@ if (isset($_POST['reg_user'])) {
 
     echo "Success";
 
-    /* PHPMailer */
-
-    $mail = new PHPMailer;                              // Passing `true` enables exceptions
-    try {
-    //Server settings
-    $mail->SMTPDebug = 4;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'paianiket4@gmail.com';                 // SMTP username
-    $mail->Password = 'cikqcqx*';                           // SMTP password
-    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
-
-    //Recipients
-    $mail->setFrom('paianiket4@gmail.com', 'ANiket Pai');
-    $mail->addAddress( $email , 'Joe User');     // Add a recipient
-  //  $mail->addAddress($firstname+" "+$lastname);               // Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-   // $mail->addCC('cc@example.com');
-   // $mail->addBCC('bcc@example.com');
-/*
-  //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-*/
-
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Registration for Get-Recipe';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-}
-
-
-  //	header('location: login.html');
+  	header('location: login.html');
   }
 
 }

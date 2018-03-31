@@ -6,11 +6,13 @@ function loadDoc() {
     if (this.readyState == 4 && this.status == 200) {
      var response=JSON.parse(xhttp.responseText);
      var matches=response.matches;
+
+   
    
      console.log(response);
 
-     for(var i=0; i< matches.length ;  i++  ){
-         
+     for(var i=0;  i< matches.length ;  i++  ){
+      var a=10;   
       var div=document.createElement('div');
       div.className="col-md-4";
       
@@ -18,8 +20,8 @@ function loadDoc() {
       <img class="card-img-top" src="'+ matches[i].imageUrlsBySize[90] +'" alt="Card image">\
       <div class="card-body">\
         <h4 class="card-title">'+ matches[i].sourceDisplayName  +'</h4>\
-        <p class="card-text">Time taken to make: '+ matches[i].totalTimeInSeconds +'</p>\
-        <a href="#" class="btn btn-primary">See Recipe</a>\
+        <p class="card-text">Time taken to make: '+ matches[i].totalTimeInSeconds +'s</p>\
+        <a href="#" class="btn btn-primary" onclick="openInNewTab('+matches[i].totalTimeInSeconds+')" >See Recipe</a>\
       </div>\
     </div>';
      
@@ -34,3 +36,15 @@ function loadDoc() {
   xhttp.open("GET",url, true);
   xhttp.send();
 }
+
+function openInNewTab(a) {
+  
+  console.log(a);
+  
+  var win = window.open('recipes.html', '_blank');
+  
+  //someFunction(a);
+  win.focus();
+}
+
+
