@@ -6,11 +6,7 @@ function loadDoc() {
     if (this.readyState == 4 && this.status == 200) {
      var response=JSON.parse(xhttp.responseText);
      var matches=response.matches;
-
-   
-   
-     console.log(response);
-
+     
      for(var i=0;  i< matches.length ;  i++  ){
       var a=10;   
       var div=document.createElement('div');

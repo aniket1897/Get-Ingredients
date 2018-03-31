@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
 
      <!-- jQuery Scripts -->
 
@@ -22,14 +22,14 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
      </script>
 
-     <script src="bootstrap/bootstrap.min.js"></script>
+     <script src="../bootstrap/bootstrap.min.js"></script>
 
 
     <!-- Custom styles for this template -->
-    <link href="register.css" rel="stylesheet">
+    <link href="../css/register.css" rel="stylesheet">
 
 
-<script type="text/javascript" src="js/jquery.js"></script>
+<!--<script type="text/javascript" src="js/jquery.js"></script>--> 
 <script type="text/javascript">
 function checkemail()
 {
@@ -66,13 +66,13 @@ function checkemail()
 </script>
   </head>
 
-  <body class="text-center">
+  <body class="text-center" style="background-color: #ffcccc;">
 
       <header>
           <!-- Fixed navbar -->
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
             <a class="navbar-brand" href="#">
-              <img src="images/logo.jpeg" alt="LOGO" width="50" height="50" >&ThickSpace; Get Recipe
+              <img src="../images/logo.jpeg" alt="LOGO" width="50" height="50" >&ThickSpace; Get Recipe
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -82,10 +82,10 @@ function checkemail()
            <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../html/search.html">Search Recipes<span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <ul class="navbar-nav ml-auto">
@@ -102,9 +102,9 @@ function checkemail()
           </nav>
         </header>
 
-    <form class="form-signin" method="post" action="register5.php">
+    <form class="form-signin" method="post" action="register.php">
       
-       <img class="mb-4" src="images/logo.jpeg" alt="" width="152" height="152"> 
+       <img class="mb-4" src="../images/logo.jpeg" alt="" width="152" height="152"> 
       <h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
       <label for="fname" class="sr-only">Enter first name</label>
