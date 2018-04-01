@@ -7,12 +7,14 @@
     <meta name="author" content="">
   
 
-    <title>Welcome to Get Recipe!!</title>
+    <title id="doc_title"></title>
 
-    <script src="recipes.js" ></script>
+    <!-- Scripts -->
+    <script src="../js/recipes.js" ></script>  
+    <script src="../js/main.js" ></script>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- jQuery & Bootstrap Scripts -->
@@ -21,20 +23,20 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
     </script>
-    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
   
     <!-- Styles for recipes page -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="home.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/recipes.css">
   </head>
 
-  <body class="text-center" style="background-color: #ffcccc;">
+  <body class="text-center" style="background-color: #ffcccc;"
+  onload="someFunction()">
 
       <header>
           <!-- Fixed navbar -->
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger" style="position:fixed;">
             <a class="navbar-brand" href="#">
-              <img src="images/logo.jpeg" alt="LOGO" width="50" height="50" >&ThickSpace; Get Recipe
+              <img src="../images/logo.jpeg" alt="LOGO" width="50" height="50" >&ThickSpace; Get Recipe
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -43,43 +45,34 @@
 
            <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
-
-             <!---   <li class="nav-item">
-                  <a class="nav-link" href="#">Veg Recipes<span class="sr-only">(current)</span></a>
-                </li>
-
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Non-Veg Recipes<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
-
-                <li class="nav-item ">
-                  <a class="nav-link" href="#">Diet Recipes<span class="sr-only">(current)</span></a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Search Recipes<span class="sr-only">(current)</span></a>
                 </li>
-              -->
-
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
-                  <a class="nav-link" href="login.html">Login<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../php/login.php">Login<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../php/register.php">Register<span class="sr-only">(current)</span></a>
                 </li>
 
-              <!--
-                <li class="nav-item">
-                  <a class="nav-link" href="https://getrecipe591286641.wordpress.com">Blogs<span class="sr-only">(current)</span></a>
-                </li>
-              -->
               </ul>     
             </div> 
           </nav>
         </header>
         
+      <!-- Main Content  -->
+        <div class="container">
+          <div class="recipes">
+              <h1 id="title"></h1>
+          </div>
+        </div>
+
   
 </body>
 </html>

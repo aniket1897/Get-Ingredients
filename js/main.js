@@ -1,3 +1,5 @@
+var matches;
+var index;
 function loadDoc() {
   var field=document.getElementById("search_field").value;
   var url="http://api.yummly.com/v1/api/recipes?_app_id=aca5f9f4&_app_key=1239d6ac759cf352ad4ce1c4e2c7706c&q="+field;
@@ -5,10 +7,9 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
      var response=JSON.parse(xhttp.responseText);
-     var matches=response.matches;
-     
-     for(var i=0;  i< matches.length ;  i++  ){
-      var a=10;   
+     matches=response.matches;
+     var i;
+     for(i=0;  i< matches.length ;  i++  ){ 
       var div=document.createElement('div');
       div.className="col-md-4";
       
@@ -17,7 +18,7 @@ function loadDoc() {
       <div class="card-body">\
         <h4 class="card-title">'+ matches[i].sourceDisplayName  +'</h4>\
         <p class="card-text">Time taken to make: '+ matches[i].totalTimeInSeconds +'s</p>\
-        <a href="#" class="btn btn-primary" onclick="openInNewTab('+matches[i].totalTimeInSeconds+')" >See Recipe</a>\
+        <a href="#" class="btn btn-primary" onclick="openInNewTab('+i+')" >See Recipe</a>\
       </div>\
     </div>';
      
@@ -25,22 +26,33 @@ function loadDoc() {
 
    }
 
-
     }
 
   };
   xhttp.open("GET",url, true);
   xhttp.send();
 }
-
 function openInNewTab(a) {
-  
-  console.log(a);
-  
+  console.log(a);  
+  var recipes_object={
+      recipes_array:matches,
+      recipes_index:a
+  };
+
+  console.log(localStorage.getItem("bookmarks"));
+
+  if(localStorage.getItem("bookmarks") === null ){
+    var bookmarks=[];
+    bookmarks.push(recipes_object);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks) );
+  }
+
   var win = window.open('recipes.html', '_blank');
-  
-  //someFunction(a);
   win.focus();
+}
+
+function deleteBookmarks(){
+  localStorage.clear();
 }
 
 
