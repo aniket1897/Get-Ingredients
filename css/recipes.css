@@ -6,7 +6,7 @@ html {
 }
 body {
   margin-bottom: 60px;
-  color: black;
+  color: #660000  ;
 }
  .footer {
   position: absolute;
@@ -16,9 +16,23 @@ body {
   line-height: 60px; 
   background-color:#dc3545; 
 }
+/* 
+.list-group{
+ /* width:30%;
+  margin-left: 10px;
+} */
+.list-group-item{
+  background-color: #ff8080;
+  color: white;
+}
+.ingredients_display{
+    margin-top:40px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
 
 body > .container {
-  margin-top:20px;
+  margin-top:40px;
   padding: 60px 15px 0;
 }
 

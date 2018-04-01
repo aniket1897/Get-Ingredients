@@ -33,13 +33,10 @@ function loadDoc() {
   xhttp.send();
 }
 function openInNewTab(a) {
-  console.log(a);  
   var recipes_object={
       recipes_array:matches,
       recipes_index:a
   };
-
-  console.log(localStorage.getItem("bookmarks"));
 
   if(localStorage.getItem("bookmarks") === null ){
     var bookmarks=[];
