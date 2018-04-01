@@ -13,5 +13,19 @@ git clone git@github.com:aniket1897/Get-Recipe.git
 1. Click on ```choose file```.
 1. And click ```Go```
 
+## Technology Stack
+* HTML, CSS
+* Bootstrap 4.0
+* AJAX
+* JSON
+* PHP
+* XAMPP/PHPMyadmin server
+
+## API's
+API used for this project is Yummly API
+```
+https://developer.yummly.com/
+```
+
 
 
