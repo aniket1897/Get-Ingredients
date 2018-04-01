@@ -26,6 +26,8 @@ API used for this project is Yummly API
 ```
 https://developer.yummly.com/
 ```
+1. Create your own application id.
+1. Create your API key.
 
 
 
