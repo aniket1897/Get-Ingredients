@@ -57,14 +57,14 @@
                 <li class="nav-item">
                   <a class="nav-link" href="register.php">Register<span class="sr-only">(current)</span></a>
                 </li>
-              
-              </ul>     
-            </div> 
+
+              </ul>
+            </div>
           </nav>
         </header>
 
     <form class="form-signin" method="post" action="login.php">
-             <img class="mb-4" src="../images/logo.jpeg" alt="" width="152" height="152"> 
+             <img class="mb-4" src="../images/logo.jpeg" alt="" width="152" height="152">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
@@ -72,8 +72,8 @@
       <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
       <?php include('errors.php'); ?>
 
-    
-       <button class="btn btn-lg btn-danger btn-block" type="submit" name="login_user">Sign in</button> 
+
+       <button class="btn btn-lg btn-danger btn-block" type="submit" name="login_user">Sign in</button>
     </form>
 
     <footer class="footer bg-footer-color">

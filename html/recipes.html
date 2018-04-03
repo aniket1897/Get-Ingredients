@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-  
+
 
     <title id="doc_title"></title>
 
     <!-- Scripts -->
-    <script src="../js/recipes.js" ></script>  
+    <script src="../js/recipes.js" ></script>
     <script src="../js/main.js" ></script>
 
     <!-- Bootstrap core CSS -->
@@ -24,7 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
     </script>
     <script src="../bootstrap/bootstrap.min.js"></script>
-  
+
     <!-- Styles for recipes page -->
     <link rel="stylesheet" href="../css/recipes.css">
   </head>
@@ -61,42 +61,53 @@
                   <a class="nav-link" href="../php/register.php">Register<span class="sr-only">(current)</span></a>
                 </li>
 
-              </ul>     
-            </div> 
+              </ul>
+            </div>
           </nav>
         </header>
-        
+
       <!-- Main Content  -->
+        <div class="ratings" id="ratings">
+              <h4 style="display:inline">Ratings </h4>
+        </div>
         <div class="container">
           <div class="recipes">
               <h1 id="title"></h1>
           </div>
         </div>
         <div id="display_image"></div>
-        <div class="row">
+        <div class="row" style="margin-left:15px;">
 
-          <div class="col-md-3">
+          <div class="col-md-4" style="margin-top:0px;">
             <div class="ingredients_display">
-                <ul id="ingredients" class="list-group"> 
-                  <h2>Ingredients</h2>
-                </ul>               
-            </div> 
-            
-            <!-- <div class="col-md-4">
-                <div class="ingredients_display">
-                    <ul id="ingredients" class="list-group"> 
-                      <h3>Ingredients</h3>
-                    </ul>               
-                </div>  -->
-            
+                <ul id="ingredients" class="list-group">
+                  <h3>Ingredients To Be Added</h3>
+                </ul>
+            </div>
           </div>
-        </div>
+
+            <div class="col-md-4">
+                <div class="ingredients_display">
+                    <ul id="course_type" class="list-group">
+                      <h3>Course Type</h3>
+                    </ul>
+                </div>
+           </div>
+             <div class="col-md-4" style="margin-top:38px;">
+                   <div class="flavours">
+                       <ul id="flavours" class="list-group">
+                         <h3>Flavours</h3>
+                       </ul>
+             </div>
+           </div>
+
+      </div>
 
         <footer class="footer bg-footer-color">
             <div class="container">
               <span class="text-muted">&copy; Copyright 2018-2019</span>
             </div>
-          </footer> 
-  
+          </footer>
+
 </body>
 </html>
