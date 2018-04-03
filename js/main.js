@@ -33,11 +33,12 @@ function loadDoc() {
   xhttp.send();
 }
 function openInNewTab(a) {
+  deleteBookmarks();
   var recipes_object={
       recipes_array:matches,
       recipes_index:a
   };
-
+  console.log("AC");
   if(localStorage.getItem("bookmarks") === null ){
     var bookmarks=[];
     bookmarks.push(recipes_object);
@@ -49,6 +50,7 @@ function openInNewTab(a) {
 }
 
 function deleteBookmarks(){
+  console.log("Bookmarks deleted");
   localStorage.clear();
 }
 

@@ -59,7 +59,4 @@ function someFunction (){
     li.innerHTML=''+c[i]+'';
     document.getElementById("course_type").appendChild(li);
   }
-
-
-
 }
