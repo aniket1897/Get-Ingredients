@@ -79,9 +79,9 @@ if (isset($_POST['login_user'])) {
     $results = mysqli_query($db, $query);
     $firstname= mysqli_query($db, $query1);
     if (mysqli_num_rows($results) == 1) {
-      $_SESSION['username'] = $firstname;
+      $_SESSION['username'] = $email;
       $_SESSION['success'] = "You are now logged in";
-      header('location: profile.php');
+     header('location: search.php');
     }else {
       array_push($errors, "Wrong email/password combination");
       

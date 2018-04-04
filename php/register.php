@@ -84,9 +84,7 @@ function checkemail()
                 <li class="nav-item">
                   <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../html/search.html">Search Recipes<span class="sr-only">(current)</span></a>
-                </li>
+               
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">

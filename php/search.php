@@ -1,3 +1,10 @@
+<?php session_start();  
+if($_SESSION['username'] == ''){
+  header('location: login.php');
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +17,7 @@
     <title>Search Recipes</title>
 
     <!-- Scripts -->
-    <script src="../js/main.js" ></script>
+    <script src="../js/search.js" ></script>
     <script src="../js/recipes.js" ></script>
 
     <!-- Bootstrap core CSS -->
@@ -85,15 +92,13 @@ form.search_box::after {
                   <a class="nav-link active" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
                 </li>
               </ul>
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
-                  <a class="nav-link" href="../php/login.php">Login<span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="../php/register.php">Register<span class="sr-only">(current)</span></a>
-                </li>
-              </ul>     
+                  <div class="dropdown">
+                  <button class="btn dropdown-toggle" style="background-color:#990000;color:white;" type="button" data-toggle="dropdown">Hello <?php echo $_SESSION['username'];?>
+                  </button>
+                  <div class="dropdown-menu">
+                   <a class="dropdown-item" href="logout.php">Logout</a>
+                   </div>
+                  </div>
             </div> 
           </nav>
         </header>
