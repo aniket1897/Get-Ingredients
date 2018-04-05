@@ -66,7 +66,7 @@ function checkemail()
 </script>
   </head>
 
-  <body class="text-center" style="background-color: #ffcccc;">
+  <body class="text-center" style="background-color: #ffcccc; background-image:url('../images/background.jpg');">
 
       <header>
           <!-- Fixed navbar -->

@@ -70,7 +70,7 @@ form.search_box::after {
 
   </head>
 
-  <body class="text-center" style="background-color: #ffcccc;" onload="deleteBookmarks
+  <body class="text-center" style="background-color: #ffcccc;background-image:url('../images/background.jpg');" onload="deleteBookmarks
   ()">
 
       <header>
@@ -119,7 +119,7 @@ form.search_box::after {
          
         
       </div>   
-    <footer class="footer bg-footer-color">
+    <footer class="footer bg-footer-color" style="color:white;">
         <div class="container">
           <span class="text-muted">&copy; Copyright 2018-2019</span>
         </div>
