@@ -25,26 +25,30 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger" style="position:fixed;">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.jpeg" alt="LOGO" width="50" height="50" >&ThickSpace; Get Recipe
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="#section-home" class="nav-link"><font color = black><mark>Home</mark></font></a></li>
-            <li class="nav-item"><a href="#section-gallery" class="nav-link"><mark>Gallery</mark></a></li>
-            <li class="nav-item"><a href="#section-contact" class="nav-link"><mark>Contact</mark></a></li>
-            <li class="nav-item"><a href="php/login.php" class="nav-link"><mark>Login</mark></a></li>
-            <li class="nav-item"><a href="php/register.php" class="nav-link"><mark>Register</mark></a></li>
-          </ul></font>
-        </div>
-      </div>
+     <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active"><a href="#section-gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item active"><a href="#section-contact" class="nav-link">Contact</a></li>
+          </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="php/login.php" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="php/register.php" class="nav-link">Register</a></li>
+        </ul>
+      </div> 
     </nav>
+  </header>
     <!-- END nav -->
 
     <section class="ftco-cover" style="background-image: url(images/bg_3.jpg);" id="section-home">
