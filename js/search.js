@@ -45,7 +45,7 @@ function openInNewTab(a) {
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks) );
   }
 
-  var win = window.open('../html/recipes.html', '_blank');
+  var win = window.open('recipes.php', '_blank');
   win.focus();
 }
 

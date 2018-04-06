@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,13 +33,12 @@
   <body class="text-center" style="background-color: #ffcccc;"
   onload="someFunction()">
 
-      <header>
+     <header>
           <!-- Fixed navbar -->
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger" style="position:fixed;">
             <a class="navbar-brand" href="#">
               <img src="../images/logo.jpeg" alt="LOGO" width="50" height="50" >&ThickSpace; Get Recipe
             </a>
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,21 +48,18 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
-                  <a class="nav-link" href="../php/login.php">Login<span class="sr-only">(current)</span></a>
-                </li>
-
                 <li class="nav-item">
-                  <a class="nav-link" href="../php/register.php">Register<span class="sr-only">(current)</span></a>
+                  <a class="nav-link active" href="search.html">Search Recipes<span class="sr-only">(current)</span></a>
                 </li>
-
               </ul>
-            </div>
+                  <div class="dropdown">
+                  <button class="btn dropdown-toggle" style="background-color:#990000;color:white;" type="button" data-toggle="dropdown">Hello <?php echo $_SESSION['username'];?>
+                  </button>
+                  <div class="dropdown-menu">
+                   <a class="dropdown-item" href="logout.php">Logout</a>
+                   </div>
+                  </div>
+            </div> 
           </nav>
         </header>
 
