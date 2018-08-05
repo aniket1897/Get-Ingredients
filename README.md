@@ -1,5 +1,5 @@
-# Get-Recipe
-Project created as a part of AIT
+# Get-Ingredients
+Project idea is to search ingredients of particular recipe using keywords.
 
 # Project
 ## Cloning
